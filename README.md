@@ -18,7 +18,7 @@ before submitting.
 
 # Specification
 
-# POST /transactions
+## POST /transactions
 This endpoint is called to create a new transaction. It MUST execute in constant time
 and memory (O(1)).
 Body:
@@ -39,7 +39,7 @@ Returns: Empty body with one of the following:
  - 400: if the JSON is invalid
  - 422: if any of the fields are not parsable or the transaction date is in the future
 
-# GET /statistics
+## GET /statistics
 This endpoint returns the statistics based on the transactions that happened in the
 last 60 seconds. It MUST execute in constant time and memory (O(1)).
 Returns:
@@ -68,7 +68,7 @@ All BigDecimal values always contain exactly two decimal places and use
 `HALF_ROUND_UP` rounding. eg: 10.345 is returned as 10.35, 10.8 is returned as
 10.80
 
-# DELETE /transactions
+## DELETE /transactions
 This endpoint causes all existing transactions to be deleted
 The endpoint should accept an empty request body and return a 204 status code.
 
